@@ -11,7 +11,6 @@ Features for MVP:
   - see percentage of days done for interest
 
 Tasks:
-  - add app icon
   - style the action bar
   - create interest list fragment showing only interest name
   - create supporting stack with dummy repository
