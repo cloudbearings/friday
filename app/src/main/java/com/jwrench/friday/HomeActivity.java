@@ -6,7 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.jwrench.friday.interest.InterestDummyRepository;
+import com.jwrench.friday.interest.InterestFactory;
 import com.jwrench.friday.interest.InterestListFragment;
+import com.jwrench.friday.interest.InterestListPresenter;
+import com.jwrench.friday.interest.InterestListView;
 
 
 public class HomeActivity extends Activity {
@@ -16,7 +19,7 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        setupInterestListFragment(createInterestListRepository());
+        setupInterestListFragment();
     }
 
     @Override
@@ -36,14 +39,11 @@ public class HomeActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private InterestDummyRepository createInterestListRepository() {
-        return new InterestDummyRepository();
-    }
-
-    private void setupInterestListFragment(InterestDummyRepository repository) {
+    private void setupInterestListFragment() {
         InterestListFragment interestListFragment = new InterestListFragment();
 
-        interestListFragment.setRepository(repository);
+        InterestListPresenter presenter = InterestFactory.buildInterestListPresenter(interestListFragment, new InterestDummyRepository());
+        interestListFragment.setPresenter(presenter);
 
         getFragmentManager().beginTransaction()
                 .add(R.id.interest_list_container, interestListFragment)

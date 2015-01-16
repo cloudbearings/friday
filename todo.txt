@@ -5,15 +5,16 @@ Features for MVP:
   - delete an interest
   - mark an interest as done for the day
   - add more complex recurrence to interest
-  - view a list of interests only for today
+  - view a list of interests only for today - can't only show for today, maybe have different sections, but need to show all, otherwise how do you edit etc.
   - mark an interest as done retrospectively
   - see highest streak for an interest
   - see percentage of days done for interest
   - app works well on phones and tablets
 
 Tasks:
-  - enhance dummy repository to have proper interest fields
   - create proper interest list item
   - create real repository
+  - show message on error getting interests
+  - show info message if no interests exist
 
 Notes:

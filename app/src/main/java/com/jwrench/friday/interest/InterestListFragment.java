@@ -2,36 +2,51 @@ package com.jwrench.friday.interest;
 
 import android.os.Bundle;
 import android.app.ListFragment;
-import android.widget.ArrayAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.SimpleAdapter;
 
 import com.jwrench.friday.R;
 
 import java.util.List;
+import java.util.Map;
 
-public class InterestListFragment extends ListFragment {
+public class InterestListFragment extends ListFragment implements InterestListView {
 
-    private InterestRepository repository;
+    private InterestListPresenter presenter;
 
-    public InterestListFragment() {}
+    private List<Map<String, Object>> interests;
+
+    private int[] listItemViews;
+
+    public InterestListFragment() {
+        listItemViews = new int[]{R.id.interest_item_title, R.id.interest_item_note, R.id.interest_item_minutes,
+                R.id.interest_item_start_date, R.id.interest_item_stop_date};
+    }
+
+    public void setPresenter(InterestListPresenter presenter) {
+        this.presenter = presenter;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        createDataProvider(getInterests());
     }
 
-    public void setRepository(InterestRepository repository) {
-        this.repository = repository;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view =  super.onCreateView(inflater, container, savedInstanceState);
+
+        presenter.onViewCreation();
+
+        return view;
     }
 
-    private List<String> getInterests() {
-        return repository.getInterests();
-    }
+    @Override
+    public void showInterestList(List<Map<String, Object>> interests, String[] fields) {
+        this.interests = interests;
 
-    private void createDataProvider(List<String> interests) {
-        setListAdapter(new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, interests));
+        setListAdapter(new SimpleAdapter(getActivity(), this.interests, R.layout.interest_list_item, fields, listItemViews));
     }
-
 }

@@ -1,7 +1,8 @@
 package com.jwrench.friday.interest;
 
 import java.util.List;
+import java.util.Map;
 
 public interface InterestRepository {
-    List<String> getInterests();
+    List<Map<String, Object>> getInterests();
 }
