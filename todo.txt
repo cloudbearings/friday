@@ -12,9 +12,8 @@ Features for MVP:
   - app works well on phones and tablets
 
 Tasks:
-  - create interest list fragment showing only interest name
-  - create supporting stack with dummy repository
-  - create real repository
+  - enhance dummy repository to have proper interest fields
   - create proper interest list item
+  - create real repository
 
 Notes:

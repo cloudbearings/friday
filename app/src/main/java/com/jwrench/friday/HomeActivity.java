@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.jwrench.friday.interest.InterestDummyRepository;
 import com.jwrench.friday.interest.InterestListFragment;
 
 
@@ -15,11 +16,8 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        getFragmentManager().beginTransaction()
-                .add(R.id.interest_list_container, new InterestListFragment())
-                .commit();
+        setupInterestListFragment(createInterestListRepository());
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -37,4 +35,19 @@ public class HomeActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private InterestDummyRepository createInterestListRepository() {
+        return new InterestDummyRepository();
+    }
+
+    private void setupInterestListFragment(InterestDummyRepository repository) {
+        InterestListFragment interestListFragment = new InterestListFragment();
+
+        interestListFragment.setRepository(repository);
+
+        getFragmentManager().beginTransaction()
+                .add(R.id.interest_list_container, interestListFragment)
+                .commit();
+    }
+
 }
