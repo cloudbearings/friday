@@ -9,9 +9,9 @@ Features for MVP:
   - mark an interest as done retrospectively
   - see highest streak for an interest
   - see percentage of days done for interest
+  - app works well on phones and tablets
 
 Tasks:
-  - style the action bar
   - create interest list fragment showing only interest name
   - create supporting stack with dummy repository
   - create real repository
