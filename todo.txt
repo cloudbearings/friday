@@ -1,0 +1,21 @@
+Features for MVP:
+  - view a list of all interests
+  - create an interest (basic, without recurrence i.e. everyday)
+  - edit an interest
+  - delete an interest
+  - mark an interest as done for the day
+  - add more complex recurrence to interest
+  - view a list of interests only for today
+  - mark an interest as done retrospectively
+  - see highest streak for an interest
+  - see percentage of days done for interest
+
+Tasks:
+  - add app icon
+  - style the action bar
+  - create interest list fragment showing only interest name
+  - create supporting stack with dummy repository
+  - create real repository
+  - create proper interest list item
+
+Notes:
