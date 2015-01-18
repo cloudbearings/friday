@@ -21,8 +21,7 @@ public class InterestListFragment extends ListFragment implements InterestListVi
     private int[] listItemViews;
 
     public InterestListFragment() {
-        listItemViews = new int[]{R.id.interest_item_title, R.id.interest_item_note, R.id.interest_item_minutes,
-                R.id.interest_item_start_date, R.id.interest_item_stop_date};
+        listItemViews = new int[]{R.id.interest_item_title, R.id.interest_item_note, R.id.interest_item_minutes};
     }
 
     public void setPresenter(InterestListPresenter presenter) {

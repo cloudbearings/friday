@@ -1,6 +1,7 @@
 Features for MVP:
-  - view a list of all interests
-  - create an interest (basic, without recurrence i.e. everyday)
+  * create an interest (basic, without recurrence i.e. everyday)
+  - inform user if no interests exist or there's and error fetching the interests
+  - enhance the list item view (time icon, shading, layout)
   - edit an interest
   - delete an interest
   - mark an interest as done for the day
@@ -12,9 +13,13 @@ Features for MVP:
   - app works well on phones and tablets
 
 Tasks:
-  - create proper interest list item
-  - create real repository
-  - show message on error getting interests
-  - show info message if no interests exist
+  - add create icon to action bar
+  - transition to detail view
+  - create the interest detail UI
+  - preserve state on exit other than up or back
+  - save on up or back
+  - save the interest to real repository
+  - make list use real repository
+  - update the list when returning to it from the detail
 
 Notes:
