@@ -14,6 +14,9 @@ Features for MVP:
 
 Tasks:
   - create the interest detail UI
+    - options for date pickers?? set 2 views to false and create custom content
+  - BUG: NPE presenter in list fragment when recreating after orientation change
+  - change minutes to spinner or something - number picker
   - preserve state on exit other than up or back
   - save on up or back
   - save the interest to real repository

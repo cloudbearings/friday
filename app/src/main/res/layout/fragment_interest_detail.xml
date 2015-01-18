@@ -1,10 +1,54 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
     tools:context="com.jwrench.friday.interest.InterestDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <EditText
+        android:id="@+id/detail_title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/detail_title_hint"
+        android:textStyle="bold"
+        android:background="@null"
+        android:padding="10dp"/>
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/detail_note_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/detail_note_hint"
+        android:background="@null"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/detail_minutes_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/detail_minutes_hint"
+        android:background="@null"
+        android:padding="10dp"/>
+
+    <DatePicker
+        android:id="@+id/detail_start_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:calendarViewShown="false"
+        android:spinnersShown="true">
+
+
+
+    </DatePicker>
+
+    <DatePicker
+        android:id="@+id/detail_stop_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+    </DatePicker>
+
+</LinearLayout>
