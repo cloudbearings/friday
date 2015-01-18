@@ -1,10 +1,12 @@
 package com.jwrench.friday;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.jwrench.friday.interest.InterestDetailActivity;
 import com.jwrench.friday.interest.InterestDummyRepository;
 import com.jwrench.friday.interest.InterestFactory;
 import com.jwrench.friday.interest.InterestListFragment;
@@ -34,9 +36,16 @@ public class HomeActivity extends Activity {
 
         if (id == R.id.action_settings) {
             return true;
+        } else if (id == R.id.action_create) {
+            openInterestDetails();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void openInterestDetails() {
+        Intent interestDetails = new Intent(this, InterestDetailActivity.class);
+        startActivity(interestDetails);
     }
 
     private void setupInterestListFragment() {

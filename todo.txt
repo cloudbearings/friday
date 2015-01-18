@@ -13,8 +13,6 @@ Features for MVP:
   - app works well on phones and tablets
 
 Tasks:
-  - add create icon to action bar
-  - transition to detail view
   - create the interest detail UI
   - preserve state on exit other than up or back
   - save on up or back

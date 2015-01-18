@@ -1,13 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".HomeActivity">
-
-    <item android:id="@+id/action_create"
-        android:title="@string/create_interest"
-        android:orderInCategory="10"
-        android:showAsAction="always"
-        android:icon="@drawable/ic_action_new"/>
-
+    tools:context="com.jwrench.friday.interest.InterestDetailActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>

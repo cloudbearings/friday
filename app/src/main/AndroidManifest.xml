@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".interest.InterestDetailActivity"
+            android:label="@string/title_activity_interest_detail"
+            android:parentActivityName=".HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jwrench.friday.HomeActivity" />
+        </activity>
     </application>
 
 </manifest>
