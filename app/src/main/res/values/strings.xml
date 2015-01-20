@@ -10,6 +10,9 @@
     <string name="detail_title_hint">Title</string>
     <string name="detail_note_hint">Note</string>
     <string name="detail_minutes_hint">How long do you want to do this for (minutes)</string>
-    <string name="detail_start_date_label">Start on</string>
+    <string name="detail_start_date_label">From</string>
+    <string name="detail_stop_date_hint">Stop date</string>
+    <string name="detail_stop_date_label">Until</string>
+    <string name="detail_start_date_hint">Start date</string>
 
 </resources>

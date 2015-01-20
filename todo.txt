@@ -1,5 +1,6 @@
 Features for MVP:
   * create an interest (basic, without recurrence i.e. everyday)
+  - catch up on various forms of testing
   - inform user if no interests exist or there's and error fetching the interests
   - enhance the list item view (time icon, shading, layout)
   - edit an interest
@@ -14,9 +15,9 @@ Features for MVP:
 
 Tasks:
   - create the interest detail UI
-    - options for date pickers?? set 2 views to false and create custom content
+    - change minutes to spinner or something - use a spinner...
+    - clean up all the shit
   - BUG: NPE presenter in list fragment when recreating after orientation change
-  - change minutes to spinner or something - number picker
   - preserve state on exit other than up or back
   - save on up or back
   - save the interest to real repository
