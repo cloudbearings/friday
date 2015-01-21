@@ -21,9 +21,7 @@ public class InterestStore {
             interests.add(new Interest(
                     (String) interestData.get("title"),
                     (String) interestData.get("note"),
-                    (Integer) interestData.get("minutes"),
-                    new Date((Long) interestData.get("start_date")),
-                    new Date((Long) interestData.get("stop_date"))
+                    (Integer) interestData.get("minutes")
             ));
         }
 

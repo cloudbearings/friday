@@ -9,15 +9,11 @@ public class Interest {
     private String title;
     private String note;
     private int minutes;
-    private Date startDate;
-    private Date stopDate;
 
-    public Interest(String title, String note, int minutes, Date startDate, Date stopDate) {
+    public Interest(String title, String note, int minutes) {
         this.title = title;
         this.note = note;
         this.minutes = minutes;
-        this.startDate = startDate;
-        this.stopDate = stopDate;
     }
 
     public String getTitle() {
@@ -32,22 +28,12 @@ public class Interest {
         return minutes;
     }
 
-    public Date getStartDate() {
-        return startDate;
-    }
-
-    public Date getStopDate() {
-        return stopDate;
-    }
-
     public Map<String, Object> createRecordMap() {
         Map<String, Object> record = new LinkedHashMap<>();
 
         record.put("title", getTitle());
         record.put("note", getNote());
         record.put("minutes", getMinutes());
-        record.put("start_date", getStartDate());
-        record.put("stop_date", getStopDate());
 
         return record;
     }

@@ -16,7 +16,7 @@ public class InterestListPresenter {
 
     public void onViewCreation() {
         List<Map<String, Object>> viewData = new ArrayList<>();
-        String[] fields = new String[]{"title","note","minutes", "time_unit"};
+        String[] fields = new String[]{"title","note","minutes"};
 
         for (Interest interest: store.getInterests()) {
             viewData.add(interest.createRecordMap());

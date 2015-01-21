@@ -1,5 +1,6 @@
 Features for MVP:
   * create an interest (basic, without recurrence i.e. everyday)
+  - investigate running the supporting services as a service or something independent of activities
   - catch up on various forms of testing
   - inform user if no interests exist or there's and error fetching the interests
   - enhance the list item view (time icon, shading, layout)
@@ -15,13 +16,13 @@ Features for MVP:
 
 Tasks:
   - create the interest detail UI
-    - change minutes to spinner or something - use a spinner...
-    - clean up all the shit
+    - do the duration properly
   - BUG: NPE presenter in list fragment when recreating after orientation change
   - preserve state on exit other than up or back
   - save on up or back
   - save the interest to real repository
   - make list use real repository
   - update the list when returning to it from the detail
+  - address the font size on the list when running on emulator
 
 Notes:

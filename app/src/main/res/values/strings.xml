@@ -14,5 +14,7 @@
     <string name="detail_stop_date_hint">Stop date</string>
     <string name="detail_stop_date_label">Until</string>
     <string name="detail_start_date_hint">Start date</string>
+    <string name="detail_dates_heading">Dates</string>
+    <string name="detail_duration_heading">Duration</string>
 
 </resources>
